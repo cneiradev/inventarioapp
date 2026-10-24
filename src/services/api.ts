@@ -15,21 +15,21 @@ api.interceptors.request.use((config) => {
 });
 
 export const productosApi = {
-  getAll: () => api.get("/api/productos"),
-  getById: (id: string) => api.get(`/api/productos/${id}`),
-  create: (data: any) => api.post("/api/productos", data),
-  update: (id: string, data: any) => api.put(`/api/productos/${id}`, data),
-  delete: (id: string) => api.delete(`/api/productos/${id}`),
+  getAll: () => api.get("/productos"),
+  getById: (id: string) => api.get(`/productos/${id}`),
+  create: (data: any) => api.post("/productos", data),
+  update: (id: string, data: any) => api.put(`/productos/${id}`, data),
+  delete: (id: string) => api.delete(`/productos/${id}`),
 };
 
 export const movimientosApi = {
-  getAll: () => api.get("/api/movimientos"),
-  create: (data: any) => api.post("/api/movimientos", data),
+  getAll: () => api.get("/movimientos"),
+  create: (data: any) => api.post("/movimientos", data),
 };
 
 export const authApi = {
   login: (email: string, password: string) =>
-    api.post("/api/auth/login", { email, password }),
+    api.post("/auth/login", { email, password }),
 };
 
 export const dashboardApi = {
